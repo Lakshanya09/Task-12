@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello note</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            margin-top: 100px;
+            padding: 20px;
+            background: white;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Hello Guys✨</h2>
+
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("name").value;
+
+            if(name === "") {
+                alert("Please enter your name!");
+            } else {
+                document.getElementById("output").innerText =
+                    "Hey " + name + " 💗 Welcome! How are you?🥰";
+            }
+        }
+
+        // Event: mouse over
+        document.querySelector("button").addEventListener("mouseover", function() {
+            this.innerText = "Click now 😊";
+        });
+
+        // Event: mouse out
+        document.querySelector("button").addEventListener("mouseout", function() {
+            this.innerText = "Click Me";
+        });
+    </script>
+
+</body>
+</html>
